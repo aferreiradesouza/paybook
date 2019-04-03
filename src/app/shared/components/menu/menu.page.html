@@ -1,0 +1,15 @@
+<div class="wrapper">
+    <ion-grid>
+        <ion-row>
+            <ion-col [ngClass]="{'selected' : page == 'cartao'}" (click)="mudancaTab('cartao')">
+                <ion-icon name="card"></ion-icon>
+            </ion-col>
+            <ion-col [ngClass]="{'selected' : page == 'home'}" (click)="mudancaTab('home')">
+                <ion-icon name="list"></ion-icon>
+            </ion-col>
+            <ion-col [ngClass]="{'selected' : page == 'estatistica'}" (click)="mudancaTab('estatistica')">
+                <ion-icon name="stats"></ion-icon>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</div>
