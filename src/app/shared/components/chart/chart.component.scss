@@ -1,0 +1,73 @@
+.wrapper {
+    width: calc(100% - 75px);
+    height: 32px;
+    border-radius: 6px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    display: inline-flex;
+    overflow: hidden;
+
+    > .red {
+        background-color: red;
+        width: 10%;
+    }
+    > .yellow {
+        background-color: yellow;
+        width: 10%;
+    }
+    > .blue {
+        background-color: blue;
+        width: 10%;
+    }
+    > .green {
+        background-color: green;
+        width: 20%;
+    }
+    > .pink {
+        background-color: pink;
+        width: 50%;
+    }
+}
+
+.detalhe {
+    width: calc(100% - 75px);
+    margin: 15px auto 0px;
+    display: inline-flex;
+
+    > .icon {
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+    }
+
+    > .nome {
+        width: calc(100% - 110px);
+        text-align: left;
+        padding: 10px;
+
+        > .descricao {
+            font-weight: 300;
+            font-size: 12px;
+
+        }
+        
+        > .porcentagem {
+            font-size: 11px;
+        }
+        
+    }
+
+    > .informacoes {
+        width: 65px;
+        text-align: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > .preco {
+            font-size: 10px;
+            font-weight: bold;
+        }
+    }
+}

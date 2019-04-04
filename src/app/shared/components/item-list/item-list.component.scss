@@ -1,0 +1,36 @@
+.wrapper {
+    width: 100%;
+    display: inline-flex;
+
+    .icon {
+        width: 45px;
+        height: 100%;
+        padding: 10px;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .descricao {
+        width: calc(100% - 120px);
+        height: 100%;
+        padding: 10px;
+        font-size: 14px;
+
+        > .preco {
+            font-weight: bold;
+        }
+
+        > .tag {
+            font-size: 11px;
+        }
+    }
+
+    .data {
+        width: 75px;
+        height: 100%;
+        padding: 10px;
+        font-size: 10px;
+    }
+}
