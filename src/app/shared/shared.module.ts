@@ -1,31 +1,26 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HeaderComponent } from './components/header/header.component';
-import { MenuComponent } from './components/menu/menu.component';
-import { ItemListComponent } from './components/item-list/item-list.component';
-import { ChartComponent } from './components/chart/chart.component';
 import { LocalStorageService } from './services/local-storage.service';
+import { MockService } from './services/mock.service';
+import { ComponentsModule } from './components/components.module';
+import { FormatterService } from './services/formatter.service';
 
 @NgModule({
   declarations: [
-      HeaderComponent,
-      MenuComponent,
-      ItemListComponent,
-      ChartComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
+    ComponentsModule
   ],
   exports: [
-    HeaderComponent,
-    MenuComponent,
-    ItemListComponent,
-    ChartComponent,
+    ComponentsModule
   ],
   providers: [
-    LocalStorageService
+    LocalStorageService,
+    MockService,
+    FormatterService
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-type StorageKey = 'categoria';
+type StorageKey = 'categoria' | 'itens';
 
 @Injectable({
     providedIn: 'root'

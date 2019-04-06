@@ -10,9 +10,19 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
 
     @Input() title: string;
+    @Input() closedButton: boolean;
+
+    @Output() closed = new EventEmitter();
 
     constructor(public router: Router) { }
 
     ngOnInit() {
+        if (!this.closedButton) {
+            this.closedButton = false;
+        }
+    }
+
+    fechar() {
+        this.closed.emit();
     }
 }

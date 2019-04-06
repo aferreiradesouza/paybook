@@ -1,0 +1,6 @@
+<pay-header title="Detalhes" [closedButton]="true" (closed)="fecharModal()"></pay-header>
+<div class="chart">
+  <pay-chart [data]="categorias" [scrollPosition]="0" [hideDetail]="true" (select)="categoria($event)"></pay-chart>
+</div>
+<ion-content>
+</ion-content>

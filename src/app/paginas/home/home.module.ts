@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { HomePage } from './inicio/home.page';
 import { HomeRoutingModule } from './home-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { DetalhesPage } from './modais/detalhes.page';
 
 @NgModule({
   imports: [
@@ -16,7 +17,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
     HomeRoutingModule,
     SharedModule
   ],
-  declarations: [HomePage],
+  declarations: [HomePage, DetalhesPage],
+  entryComponents: [
+    DetalhesPage
+  ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class HomeModule {}

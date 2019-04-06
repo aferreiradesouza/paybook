@@ -1,10 +1,8 @@
 <pay-header title="Paybook"></pay-header>
-<ion-content [forceOverscroll]="false">
-  <div class="chart">
-    <pay-chart></pay-chart>
-    <div class="linkDetalhes">MAIS DETALHES</div>
-  </div>
-  <pay-item></pay-item>
-  <pay-item></pay-item>
-  <pay-item></pay-item>
+<div class="chart" [ngClass]="{'padding-bottom' : scroll >= 50}">
+  <pay-chart [scrollPosition]="scroll" [data]="categorias"></pay-chart>
+  <div class="linkDetalhes" *ngIf="scroll < 50" (click)="detalhes()">MAIS DETALHES</div>
+</div>
+<ion-content [scrollEvents]="true" (ionScroll)="logScrolling($event)">
+  <pay-item *ngFor="let item of itens" [nome]="item.nome" [categoria]="formaterCategoria(item.guidCategoria)" [preco]="item.preco"></pay-item>
 </ion-content>

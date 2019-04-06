@@ -9,6 +9,10 @@ import { Router } from '@angular/router';
 
 export class ItemListComponent implements OnInit {
 
+    @Input() nome: string;
+    @Input() categoria: string;
+    @Input() preco: number;
+
     constructor(public router: Router) { }
 
     ngOnInit() {

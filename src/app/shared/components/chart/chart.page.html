@@ -1,19 +1,16 @@
 <div class="wrapper">
-    <div class="barra yellow"></div>
-    <div class="barra pink"></div>
-    <div class="barra green"></div>
-    <div class="barra blue"></div>
-    <div class="barra red"></div>
+    <div class="barra" (click)="selectCategoria(item)" *ngFor="let item of data" [ngClass]="{'opacity' : categoriaSelecionada.guid != item.guid && categoriaSelecionada.guid != null}" [style.background-color]="item.cor" [style.width]="item.porcentagem"></div>
 </div>
-<div class="detalhe">
+<div class="detalhe" *ngIf="hideDetail == false && (scrollPosition < 50 && categoriaSelecionada.guid)">
     <div class="icon">
         <ion-icon name="stats"></ion-icon>
     </div>
     <div class="nome">
-        <div class="descricao">Diversão</div>
-        <div class="porcentagem">50%</div>
+        <div class="descricao">{{categoriaSelecionada.label}}</div>
+        <div class="porcentagem">{{categoriaSelecionada.porcentagem}}</div>
     </div>
     <div class="informacoes">
-        <div class="preco">R$2.500,99</div>
+        <div class="preco">{{categoriaSelecionada.preco}}</div>
     </div>
 </div>
+<div class="detalhe msg" *ngIf="hideDetail == false && (scrollPosition < 50 && !categoriaSelecionada.guid)">Escolha uma categoria</div>

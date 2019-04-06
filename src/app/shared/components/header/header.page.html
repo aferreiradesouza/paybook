@@ -1,1 +1,6 @@
-<div class="header">{{title}}</div>
+<div class="header">
+    {{title}}
+    <div class="closed" *ngIf="closedButton" (click)="fechar()">
+        <ion-icon name="close"></ion-icon>
+    </div>
+</div>

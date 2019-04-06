@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+import { LocalStorageService } from '../../services/local-storage.service';
 
 @Component({
     selector: 'pay-chart',
@@ -9,8 +10,31 @@ import { Router } from '@angular/router';
 
 export class ChartComponent implements OnInit {
 
-    constructor(public router: Router) { }
+    public categoriaSelecionada: any = {'guid': null};
+
+    @Input() scrollPosition: number;
+    @Input() hideDetail: boolean;
+    @Input() data: any;
+
+    @Output() select = new EventEmitter();
+
+    constructor(public router: Router, public storageService: LocalStorageService) { }
 
     ngOnInit() {
+        if (!this.hideDetail) {
+            this.hideDetail = false;
+        }
+    }
+
+    selectCategoria(item) {
+        if (this.categoriaSelecionada.guid === item.guid) {
+            this.categoriaSelecionada = {'guid': null};
+            this.select.emit(null);
+            console.log(this.categoriaSelecionada);
+            return;
+        }
+        this.categoriaSelecionada = item;
+        this.select.emit(item);
+        console.log(this.categoriaSelecionada);
     }
 }

@@ -7,9 +7,10 @@ ion-content {
 .chart{
     width: 100%;
     background-color: #e7e7e7;
-    padding: 15px 15px 0px 15px;
+    padding: 15px 15px 15px 15px;
     text-align: center;
     position: relative;
+    z-index: 999;
 
     .linkDetalhes {
         width: 100%;
@@ -19,8 +20,4 @@ ion-content {
         padding: 15px;
         letter-spacing: 0.8px;
     }
-}
-
-.padding-bottom {
-    padding-bottom: 15px;
 }
