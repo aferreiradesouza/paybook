@@ -94,7 +94,7 @@ export class MockService {
             },
             {
                 'guid': 4,
-                'guidCategoria': 1,
+                'guidCategoria': 2,
                 'nome': 'Fatura Cartão',
                 'preco': 4500,
                 'data': new Date()
@@ -108,14 +108,14 @@ export class MockService {
             },
             {
                 'guid': 4,
-                'guidCategoria': 1,
+                'guidCategoria': 2,
                 'nome': 'Fatura Cartão',
                 'preco': 4500,
                 'data': new Date()
             },
             {
                 'guid': 4,
-                'guidCategoria': 1,
+                'guidCategoria': 5,
                 'nome': 'Fatura Cartão',
                 'preco': 4500,
                 'data': new Date()
