@@ -10,6 +10,7 @@ import { ModalController } from '@ionic/angular';
 })
 export class DetalhesPage implements OnInit {
   public scroll = 0;
+  public categoriaSelecionada: any;
 
   constructor(public storageService: LocalStorageService,
     public mockService: MockService,
@@ -29,6 +30,10 @@ export class DetalhesPage implements OnInit {
   }
 
   categoria(event) {
-    console.log(event);
+    if (event == null) {
+      this.categoriaSelecionada = event;
+      return;
+    }
+    this.categoriaSelecionada = event.guid;
   }
 }

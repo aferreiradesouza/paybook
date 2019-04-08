@@ -5,13 +5,15 @@ import { ChartComponent } from './chart/chart.component';
 import { ItemListComponent } from './item-list/item-list.component';
 import { MenuComponent } from './menu/menu.component';
 import { HeaderComponent } from './header/header.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 
 @NgModule({
   declarations: [
       HeaderComponent,
       MenuComponent,
       ItemListComponent,
-      ChartComponent
+      ChartComponent,
+      ProgressBarComponent
   ],
   imports: [
     CommonModule,
@@ -22,6 +24,7 @@ import { HeaderComponent } from './header/header.component';
     MenuComponent,
     ItemListComponent,
     ChartComponent,
+    ProgressBarComponent
   ],
   providers: [
   ],

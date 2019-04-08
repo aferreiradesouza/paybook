@@ -1,8 +1,8 @@
 <pay-header title="Paybook"></pay-header>
 <div class="chart" [ngClass]="{'padding-bottom' : scroll >= 50}">
-  <pay-chart [scrollPosition]="scroll" [data]="categorias"></pay-chart>
+  <pay-chart [scrollPosition]="scroll" [data]="categorias" (select)="actionCategoria($event)"></pay-chart>
   <div class="linkDetalhes" *ngIf="scroll < 50" (click)="detalhes()">MAIS DETALHES</div>
 </div>
 <ion-content [scrollEvents]="true" (ionScroll)="logScrolling($event)">
-  <pay-item *ngFor="let item of itens" [nome]="item.nome" [categoria]="formaterCategoria(item.guidCategoria)" [preco]="item.preco"></pay-item>
+  <pay-item *ngFor="let item of itens" [ngClass]="{'opacity' : categoriaSelecionada != item.guidCategoria && categoriaSelecionada != null}" [nome]="item.nome" [categoria]="formaterCategoria(item.guidCategoria)" [preco]="item.preco"></pay-item>
 </ion-content>

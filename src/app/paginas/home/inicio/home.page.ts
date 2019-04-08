@@ -13,6 +13,7 @@ import { FormatterService } from 'src/app/shared/services/formatter.service';
 export class HomePage implements OnInit {
   public scroll = 0;
   public itens: any;
+  public categoriaSelecionada: any;
 
   constructor(
     public storageService: LocalStorageService,
@@ -48,5 +49,13 @@ export class HomePage implements OnInit {
       component: DetalhesPage
     });
     await modal.present();
+  }
+
+  actionCategoria(event) {
+    if (event == null) {
+      this.categoriaSelecionada = event;
+      return;
+    }
+    this.categoriaSelecionada = event.guid;
   }
 }

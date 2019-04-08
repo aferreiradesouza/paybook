@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { LocalStorageService } from '../../services/local-storage.service';
 
@@ -30,11 +30,9 @@ export class ChartComponent implements OnInit {
         if (this.categoriaSelecionada.guid === item.guid) {
             this.categoriaSelecionada = {'guid': null};
             this.select.emit(null);
-            console.log(this.categoriaSelecionada);
             return;
         }
         this.categoriaSelecionada = item;
         this.select.emit(item);
-        console.log(this.categoriaSelecionada);
     }
 }
