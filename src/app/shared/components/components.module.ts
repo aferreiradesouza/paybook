@@ -6,6 +6,7 @@ import { ItemListComponent } from './item-list/item-list.component';
 import { MenuComponent } from './menu/menu.component';
 import { HeaderComponent } from './header/header.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { FabButtonComponent } from './fab-button/fab-button.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
       MenuComponent,
       ItemListComponent,
       ChartComponent,
-      ProgressBarComponent
+      ProgressBarComponent,
+      FabButtonComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +26,8 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
     MenuComponent,
     ItemListComponent,
     ChartComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    FabButtonComponent
   ],
   providers: [
   ],

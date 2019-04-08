@@ -35,4 +35,9 @@ export class ChartComponent implements OnInit {
         this.categoriaSelecionada = item;
         this.select.emit(item);
     }
+
+    clearCategoria() {
+        this.categoriaSelecionada = {'guid': null};
+        this.select.emit(null);
+    }
 }

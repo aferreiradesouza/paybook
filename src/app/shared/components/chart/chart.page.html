@@ -10,7 +10,10 @@
         <div class="porcentagem">{{categoriaSelecionada.porcentagem}}</div>
     </div>
     <div class="informacoes">
-        <div class="preco">{{categoriaSelecionada.preco}}</div>
+        <div class="preco">{{categoriaSelecionada.preco | currency:'R$'}}</div>
+    </div>
+    <div class="close-button" (click)="clearCategoria()">
+        <ion-icon name="close"></ion-icon>
     </div>
 </div>
 <div class="detalhe msg" *ngIf="hideDetail == false && (scrollPosition < 50 && !categoriaSelecionada.guid)">Escolha uma categoria</div>

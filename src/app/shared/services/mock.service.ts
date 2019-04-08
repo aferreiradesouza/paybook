@@ -15,35 +15,35 @@ export class MockService {
                 'cor': '#16a085',
                 'label': 'Diversão',
                 'porcentagem': '25%',
-                'preco': 'R$3.400,00'
+                'preco': 3400
             },
             {
                 'guid': 2,
                 'cor': '#27ae60',
                 'label': 'Lazer',
                 'porcentagem': '15%',
-                'preco': 'R$2.500,00'
+                'preco': 2500,
             },
             {
                 'guid': 3,
                 'cor': '#c0392b',
                 'label': 'Trabalho',
                 'porcentagem': '10%',
-                'preco': 'R$1.260,00'
+                'preco': 1260
             },
             {
                 'guid': 4,
                 'cor': '#8e44ad',
                 'label': 'Futebol',
                 'porcentagem': '40%',
-                'preco': 'R$7.000,00'
+                'preco': 7000
             },
             {
                 'guid': 5,
                 'cor': '#f39c12',
                 'label': 'Música',
                 'porcentagem': '10%',
-                'preco': 'R$1.260,00'
+                'preco': 1260
             }
         ];
     }

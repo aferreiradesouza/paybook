@@ -15,7 +15,7 @@
         <pay-progress-bar [porcentagem]="item.porcentagem" [cor]="item.cor"></pay-progress-bar>
       </div>
       <div class="preco">
-        {{item.preco}}
+        {{item.preco | currency:'R$'}}
       </div>
     </div>
   </div>

@@ -3,6 +3,11 @@
   <pay-chart [scrollPosition]="scroll" [data]="categorias" (select)="actionCategoria($event)"></pay-chart>
   <div class="linkDetalhes" *ngIf="scroll < 50" (click)="detalhes()">MAIS DETALHES</div>
 </div>
-<ion-content [scrollEvents]="true" (ionScroll)="logScrolling($event)">
-  <pay-item *ngFor="let item of itens" [ngClass]="{'opacity' : categoriaSelecionada != item.guidCategoria && categoriaSelecionada != null}" [nome]="item.nome" [categoria]="formaterCategoria(item.guidCategoria)" [preco]="item.preco"></pay-item>
+<ion-content [forceOverscroll]="false" [scrollEvents]="true" (ionScroll)="logScrolling($event)">
+  <pay-item *ngFor="let item of itens"
+    [ngClass]="{'hidden' : categoriaSelecionada != item.guidCategoria && categoriaSelecionada != null}"
+    [nome]="item.nome" [categoria]="formaterCategoria(item.guidCategoria)" [preco]="item.preco"></pay-item>
 </ion-content>
+<ion-footer>
+    <pay-fab-button></pay-fab-button>
+</ion-footer>

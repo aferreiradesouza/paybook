@@ -21,15 +21,13 @@ export class HomePage implements OnInit {
     public modalController: ModalController,
     public formatterService: FormatterService) {
 
-      this.storageService.setJson('categoria', this.mockService.categorias);
-      this.storageService.setJson('itens', this.mockService.itens);
+    this.storageService.setJson('categoria', this.mockService.categorias);
+    this.storageService.setJson('itens', this.mockService.itens);
 
-      this.itens = this.storageService.getJson('itens');
+    this.itens = this.storageService.getJson('itens');
 
   }
   ngOnInit() {
-
-    console.log(this.itens);
   }
 
   get categorias() {
@@ -58,4 +56,6 @@ export class HomePage implements OnInit {
     }
     this.categoriaSelecionada = event.guid;
   }
+
+  
 }
