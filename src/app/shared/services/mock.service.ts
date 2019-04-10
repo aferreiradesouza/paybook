@@ -55,7 +55,8 @@ export class MockService {
                 'guidCategoria': 1,
                 'nome': 'Premiere',
                 'preco': 45.90,
-                'data': new Date()
+                'data': new Date(),
+                'tags': ['legal', 'topzera']
             },
             {
                 'guid': 2,
@@ -69,7 +70,8 @@ export class MockService {
                 'guidCategoria': 1,
                 'nome': 'Maçã',
                 'preco': 5000,
-                'data': new Date()
+                'data': new Date(),
+                'tags': ['nice', 'gostei']
             },
             {
                 'guid': 4,
@@ -83,7 +85,8 @@ export class MockService {
                 'guidCategoria': 5,
                 'nome': 'Laranja',
                 'preco': 4500,
-                'data': new Date()
+                'data': new Date(),
+                'tags': ['valeuapena', 'topzera']
             },
             {
                 'guid': 4,

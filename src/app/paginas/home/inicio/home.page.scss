@@ -1,7 +1,5 @@
 ion-content {
     --background: #f8f8f8;
-    -webkit-overflow-scrolling: auto !important;
-    --padding-bottom: 64px;
 }
 
 .chart{
@@ -21,10 +19,20 @@ ion-content {
     }
 }
 
+.lista {
+    width: 100%;
+    height: calc(100% - 60px);
+    overflow-y: auto;
+}
+
 .padding-bottom {
     padding-bottom: 15px;
 }
 
 .hidden {
     display: none;
+}
+
+.no-scroll {
+    --overflow: hidden;
 }

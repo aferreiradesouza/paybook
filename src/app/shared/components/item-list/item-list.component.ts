@@ -12,6 +12,7 @@ export class ItemListComponent implements OnInit {
     @Input() nome: string;
     @Input() categoria: string;
     @Input() preco: number;
+    @Input() tags: string[];
 
     constructor(public router: Router) { }
 

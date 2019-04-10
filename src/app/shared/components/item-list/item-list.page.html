@@ -6,7 +6,9 @@
         <div class="categoria">{{categoria}}</div>
         <div class="nome">{{nome}}</div>
         <div class="preco">{{preco | currency:'R$'}}</div>
-        <div class="tag">#tag</div>
+        <div class="tag">
+            <span style="margin-right: 10px;" *ngFor="let tag of tags">{{'#'+tag}}</span>
+        </div>
     </div>
     <div class="data">20/11/1997</div>
 </div>

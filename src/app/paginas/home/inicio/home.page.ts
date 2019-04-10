@@ -56,6 +56,4 @@ export class HomePage implements OnInit {
     }
     this.categoriaSelecionada = event.guid;
   }
-
-  
 }
